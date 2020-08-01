@@ -1,0 +1,22 @@
+debug: false
+
+spring:
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:~/Documents/rfc_db/rfcdb;AUTO_SERVER=TRUE;MODE=MySQL;DATABASE_TO_LOWER=TRUE
+    username: sa
+    password:
+    schema: classpath:H2-schema.sql
+    initialization-mode: always
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+
+logging:
+  mx.meido: debug
+
